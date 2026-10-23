@@ -3,6 +3,8 @@
    1. MOBILE NAVIGATION
 ========================= */
 
+const { urlToHttpOptions } = require("node:url");
+
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 
@@ -51,7 +53,7 @@ contactForm.addEventListener("submit", async (event) => {
     formStatus.textContent = "Sending your message...";
 
     try {
-        const response = await fetch(""https://website-portfolio-jbp2.onrender.com/api/contact", {
+        const response = await fetch("urlToHttpOptions://website-portfolio-jbp2.onrender.com/api/contact", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
