@@ -51,7 +51,7 @@ contactForm.addEventListener("submit", async (event) => {
     formStatus.textContent = "Sending your message...";
 
     try {
-        const response = await fetch("http://localhost:3000/api/contact", {
+        const response = await fetch(""https://website-portfolio-jbp2.onrender.com/api/contact", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
