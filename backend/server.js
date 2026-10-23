@@ -2,6 +2,7 @@
 require("dotenv").config();
 
 const express = require("express");
+const cors = require("cors");
 const { createClient } = require("@supabase/supabase-js");
 const { Resend } = require("resend");
 
@@ -9,6 +10,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
+app.use(cors({
+    origin: "https://website-portfolio.jc-roxas-it.workers.dev"
+}));
 const path = require("path");
 app.use(express.static(path.join(__dirname, "..")));
 
