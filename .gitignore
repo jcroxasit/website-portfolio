@@ -1,0 +1,13 @@
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+backend/.env
+
+# Dependencies
+node_modules/
+backend/node_modules/
+
+# Debug logs
+npm-debug.log*
